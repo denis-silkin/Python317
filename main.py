@@ -1298,6 +1298,6 @@ from random import randint
 # t[4].append('hi')
 # print(t, id(t))
 
-
+print('Данные для добавления на GitHub')
 
 
