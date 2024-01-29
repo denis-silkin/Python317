@@ -1280,17 +1280,17 @@ from random import randint
 # print(slicer((1, 2, 8, 5, 1, 2, 9), 8))
 
 
-def kor(a, b):
-    return tuple(randint(a, b) for i in range(10))
-
-
-tpl1 = kor(0, 5)
-print(tpl1)
-tpl2 = kor(-5, 0)
-print(tpl2)
-tpl3 = tpl1 + tpl2
-print(tpl3)
-print('0 =', tpl3.count(0))
+# def kor(a, b):
+#     return tuple(randint(a, b) for i in range(10))
+#
+#
+# tpl1 = kor(0, 5)
+# print(tpl1)
+# tpl2 = kor(-5, 0)
+# print(tpl2)
+# tpl3 = tpl1 + tpl2
+# print(tpl3)
+# print('0 =', tpl3.count(0))
 
 # t = (10, 11, [1, 2, 3], [4, 5, 6], ['hello', 'world'])
 # print(t, id(t))
