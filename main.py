@@ -1439,11 +1439,150 @@ from random import randint
 # d[2] = input('-> ')
 # d[3] = input('-> ')
 # d[4] = input('-> ')
-d = {x: input('-> ') for x in range(1, 5)}
-print(d)
-try:
-    d1 = int(input('Какой элемент исключить: '))
-    del d[d1]
-except (KeyError, ValueError):
-    print('Такого ключа не существует')
+# d = {x: input('-> ') for x in range(1, 5)}
+# print(d)
+# try:
+#     d1 = int(input('Какой элемент исключить: '))
+#     del d[d1]
+# except (KeyError, ValueError):
+#     print('Такого ключа не существует')
+# print(d)
+
+# ---------------Занятие--------------------
+
+
+# d = {'x1': 3, 'x2': 7, 'x3': 5, 'x4': -1}
+# print(len(d))
+
+# goods = {
+#     '1': ['Core-i3-4330', 9, 4500],
+#     '2': ['Core-i5-4670K', 3, 8500],
+#     '3': ['AMD FX-6300', 6, 3700],
+#     '4': ['Pentium G3220', 8, 2100],
+#     '5': ['Core-i5-3450', 5, 6400],
+# }
+# for key in goods:
+#     print(key, ')', goods[key][0], ' - ', goods[key][1], 'шт. по ', goods[key][2], ' руб.', sep='')
+# while True:
+#     n = input('№: ')
+#     if n != '0':
+#         if n in goods:
+#             while True:
+#                 try:
+#                     count = int(input('Кол-во: '))
+#                     goods[n][1] += count
+#                     break
+#                 except ValueError:
+#                     print('Введите целочисленное значение')
+#         else:
+#             print('Такого ключа не существует')
+#     else:
+#         break
+#
+# for key in goods:
+#     print(key, ')', goods[key][0], ' - ', goods[key][1], 'шт. по ', goods[key][2], ' руб.', sep='')
+
+# d = {'x1': 3, 'x2': 7, 'x3': 5}
+# print(d)
+# del d['x1']
+# d['x4'] = 10
+# print(d)
+# print(d.values())
+# print(d.keys())
+# print(d.items())
+# # for key, value in d.items():
+# #     print(key, '->', value)
+# print(list(d))
+# print(list(d.values()))
+# print(list(d.items()))
+
+# d = {'x1': 3, 'x2': 7, 'x3': 5}
+#
+# d2 = d.copy()
+# print('d =', d)
+# print('d2 =', d2)
+#
+# d2['x4'] = 10
+# d['x1'] = 100
+#
+# print('d =', d)
+# print('d2 =', d2)
+
+# d = {'x1': 3, 'x2': 7, 'x3': 5}
+# print(d)
+# value = d.get('x4', 'Такого ключа не существует')
+# print(value)
+# item = d.pop('x1', 'Такого ключа не существует')
+# print(item)
+# print(d)
+# item2 = d.popitem()
+# print(item2)
+# d.clear()
+# print(d)
+
+# d = {'x1': 3, 'x2': 7, 'x3': 5}
+# print(d)
+# # item = d.setdefault('x4', 10)
+# # print(item)
+# # print(d)
+# a = {'one': 1, 'two': 2, 'x1': 10}
+# print(a)
+# a = list(a.items())
+# d.update(a)
+# print(d)
+
+# x = {'a': 1, 'b': 2}
+# y = {'b': 3, 'c': 4}
+# z = x | y
+# # z = x.copy()
+# # z.update(y)
+# print(z)
+
+# d = dict.fromkeys(['a', 'b', 'c'], 100)
+# print(d)
+
+# d = {'name': 'Kelly', 'age': 25, 'salary': 8000, 'city': 'New York'}
+# d2 = dict()
+# d2['name'] = d.pop('name')
+# d2['salary'] = d.pop('salary')
+# print(d)
+# print(d2)
+
+# d = {'name': 'Kelly', 'age': 25, 'salary': 8000, 'city': 'New York'}
+# d['location'] = d.pop('city')
+# print(d)
+
+# d = {
+#     'first': {
+#         1: 'one',
+#         2: 'two',
+#         3: 'three'
+#     },
+#     'second': {
+#         4: 'four',
+#         5: 'five'
+#     }
+# }
+# print(d)
+# for x in d:
+#     print(x)
+#     for y in d[x]:
+#         print('\t', y, ':', d[x][y])
+
+# d = {'один': 1, "два": 2, "три": 3, "четыре": 4}
+# d2 = {key: value for key, value in d.items() if value <= 2}  # Генератор словарей
+# print(d2)
+# d2[1], d2[4] = d2[4], d2[1]
+# print(d2)
+
+a = ['one', 1, 2, 3, 'two', 10, 20, 'three', 15, 36, 60, 'four', -20]
+d = dict()
+s = None
+
+for i in a:
+    if type(i) == str:
+        d[i] = []
+        s = i
+    else:
+        d[s].append(i)
 print(d)
