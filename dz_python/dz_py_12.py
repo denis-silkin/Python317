@@ -1,15 +1,25 @@
 # Homework_12
 
 
+lst = {}
 
-def print_scores(name, surname, *scores):
-    print('Name:', name)
-    print('Surname:', surname)
-    for score in scores:
-        print(score, end=' ')
-    print()
+num = int(input("Введите количество студентов: "))
+n = 0
 
 
-print_scores('Roman', 'Silkin', 5, 5)
-print_scores('Nikita', 'Silkin', 5)
+for i in range(num):
+    name = input(str(i + 1) + ' -й студент: ')
+    bal = int(input('Балл: '))
+    lst[name] = bal
+    n += bal
+
+sr = n / num
+print('Средний балл: ', round(sr))
+for i in lst:
+    if lst[i] > sr:
+        print('Студенты с баллом выше среднего: ', i)
+
+
+
+
 
