@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="container">
+    <h1>Ваш отзыв:</h1>
+    <form class="feedback">
+        <div>
+            <span>Текст обращения</span>
+            <p>
+                <textarea rows=10 cols=45 placeholder="Оставьте отзыв здесь"></textarea>
+            </p>
+        </div>
+        <input type="submit" value="Отправить">
+    </form>
+    <p>
+        <a href="{% url 'home' %}">Вернуться на главную</a>
+    </p>
+</div>
+</body>
+</html>
