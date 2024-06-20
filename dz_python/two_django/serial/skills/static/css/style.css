@@ -1,0 +1,10 @@
+body{
+    background: lightgreen;
+    padding: 0;
+    margin: 0;
+}
+.element{
+    background: lightyellow;
+    border: 6px solid #fff;
+    margin: 20px 0;
+}
