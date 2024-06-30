@@ -16,9 +16,21 @@
             </a>
         </div>
         <ul>
-            <li><a href="{% url 'index' %}">Главная</a></li>
-            <li><a href="{% url 'blogs' %}">Рецензии</a></li>
-            <li><a href="{% static 'skills/resume.pdf' %}" target="_blank">Резюме</a></li>
+            {% if user.is_authenticated %}
+                <li class="login">Пользователь: {{ user.username }}</li>
+                <li><a href="{% url 'index' %}">Главная</a></li>
+                <li><a href="{% url 'blogs' %}">Рецензии</a></li>
+                <li><a href="{% static 'skills/resume.pdf' %}" target="_blank">Резюме</a></li>
+                <li>
+                    <form action="{% url 'log_out_user' %}" method="post">
+                        {% csrf_token %}
+                         <button class="button_top">Выйти</button>
+                    </form>
+                   </li>
+            {% else %}
+                <li><a href="{% url 'sign_up_user' %}">Зарегистрироваться</a></li>
+                <li><a href="{% url 'log_in_user' %}">Войти</a></li>
+            {% endif %}
         </ul>
     </div>
 </div>
